@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ページタイトル</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ジャイアンツ大図鑑アプリ | 学生作品紹介</title>
+<style>
+:root{--orange:#f36b21;--navy:#172238;--ink:#202838;--muted:#687386;--bg:#f6f7f9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic",Meiryo,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}.top{position:sticky;top:0;background:#172238;color:white;border-bottom:4px solid var(--orange);z-index:2}
+.nav{max-width:1100px;margin:auto;padding:12px 22px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;letter-spacing:.06em}.logo b{color:var(--orange);font-size:1.5rem;margin-right:8px}nav{display:flex;gap:22px;font-size:.9rem}
+.hero{background:linear-gradient(120deg,#151e30,#34445d 65%,#783c20);color:white}
+.hero-in{max-width:1100px;margin:auto;padding:75px 22px;min-height:470px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.tag{border:1px solid #ffffff80;border-radius:30px;padding:5px 12px;font-size:.75rem;letter-spacing:.13em}
+h1{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.15;margin:22px 0}h1 span{color:#ff995e}.hero p{color:#e1e6ef;max-width:550px}
+.btn{display:inline-block;margin:20px 10px 0 0;padding:11px 20px;border-radius:8px;font-weight:bold;background:var(--orange);color:white}.btn.alt{background:transparent;border:1px solid #fff}
+.book{width:275px;height:350px;margin:auto;background:linear-gradient(145deg,#ff914d,#c94b12);border-left:12px solid #a83e10;border-radius:8px 20px 20px 8px;box-shadow:18px 20px 0 #101a2b,0 25px 50px #0008;transform:rotate(4deg);display:flex;flex-direction:column;justify-content:space-between;text-align:center;padding:25px;color:white}
+.seal{width:125px;height:125px;border:4px double white;border-radius:50%;margin:15px auto;display:grid;place-items:center;font-size:4rem;font-weight:1000}
+.book strong{font-size:2rem;line-height:1.2}.book small{letter-spacing:.15em;font-weight:bold}
+section{padding:70px 22px}.wrap{max-width:1050px;margin:auto}.heading{text-align:center;margin-bottom:35px}.heading small{color:#c94b12;font-weight:900;letter-spacing:.16em}h2{color:var(--navy);font-size:clamp(1.8rem,3vw,2.5rem);margin:7px 0}.heading p,.muted{color:var(--muted)}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.sample{background:linear-gradient(145deg,#26334a,#121b2b);color:white;padding:28px;border-radius:18px;box-shadow:0 15px 35px #17223822}.sample .num{font-size:4rem;color:var(--orange);font-weight:1000}.sample h3{margin:0}.sample p{color:#d8deea}
+ul{padding-left:22px}li{padding:6px 0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid #e5e8ee;border-radius:14px;padding:22px}.ico{font-size:1.8rem;background:#fff0e7;width:50px;height:50px;border-radius:13px;display:grid;place-items:center}.card h3{color:var(--navy);margin:12px 0 5px}.card p{font-size:.92rem;color:var(--muted);margin:0}
+.gallery{background:white}.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.tile{background:#f5f6f8;border:1px solid #e5e8ee;border-radius:13px;overflow:hidden}.art{height:120px;background:linear-gradient(135deg,#27354c,#65738a);display:grid;place-items:center;color:#ff995e;font-size:2.6rem;font-weight:1000}.tile:nth-child(2) .art{background:linear-gradient(135deg,#733d27,#d66a32)}.tile:nth-child(3) .art{background:linear-gradient(135deg,#384b63,#8290a4)}.tile:nth-child(4) .art{background:linear-gradient(135deg,#76502e,#d99b56)}.tile div:last-child{padding:13px}.tile small{color:#c94b12;font-weight:bold}.tile strong{display:block;color:var(--navy)}.note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:20px}
+.project{background:#fff0e7}.info{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.item{background:white;border:1px solid #f3d7c8;padding:17px;border-radius:11px}.item small{display:block;color:var(--muted)}.item b{color:var(--navy)}
+footer{text-align:center;background:#172238;color:#d9deea;padding:28px;font-size:.85rem}footer b{color:white}
+@media(max-width:720px){nav{display:none}.hero-in,.split{grid-template-columns:1fr;text-align:center}.hero-in{padding:55px 22px}.hero p{margin:auto}.book{transform:none;margin-top:20px}.cards{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,1fr)}.info{grid-template-columns:1fr}section{padding:55px 18px}}
+</style>
 </head>
 <body>
-    <h1>こんにちは、世界！</h1>
-    <p>これは index.html のサンプルです。</p>
-</body>
-</html>
+<header class="top"><div class="nav"><a class="logo" href="#top"><b>G</b> GIANTS ENCYCLOPEDIA</a><nav><a href="#concept">コンセプト</a><a href="#features">機能紹介</a><a href="#collection">図鑑サンプル</a><a href="#about">作品概要</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="hero-in"><div>
+<span class="tag">STUDENT WORKS / APP PROJECT</span>
+<h1>知るほど楽しい、<br><span>ジャイアンツ</span>大図鑑。</h1>
+<p>選手のプロフィールや背番号、球団の歴史、名場面をまとめて楽しめる。ジャイアンツの魅力を集めた、ファンのためのデジタル図鑑アプリです。</p>
+<a class="btn" href="#features">図鑑の機能を見る</a><a class="btn alt" href="#collection">図鑑サンプル</a>
+</div><div class="book"><small>THE BASEBALL COLLECTION</small><div><div class="seal">G</div><strong>ジャイアンツ<br>大図鑑</strong></div><small>PLAYERS • HISTORY • MOMENTS</small></div></div></section>
+<section id="concept"><div class="wrap"><div class="heading"><small>CONCEPT</small><h2>ジャイアンツの魅力を、まるごとコレクション。</h2><p>知りたい情報を探して、読んで、集める。自分だけの野球図鑑を楽しもう。</p></div>
+<div class="split"><div class="sample"><div>ENCYCLOPEDIA FILE　　NO.001</div><div class="num">G!</div><h3>GIANTS COLLECTION</h3><p>選手・記録・歴史・名場面をひとつにまとめた、デジタル図鑑のトップ画面イメージ。</p></div><div><h3>好きなところから、発見しよう。</h3><p>選手名鑑を眺めたり、背番号から選手を探したり、球団の歴史を振り返ったり。情報をカテゴリごとに整理し、初めて知る人にもファンにも使いやすいアプリを目指しました。</p><ul><li>カテゴリ別に整理された見やすい図鑑ページ</li><li>キーワードや背番号から探せる検索機能</li><li>お気に入り登録で自分だけのコレクションを作成</li></ul></div></div></div></section>
+<section id="features"><div class="wrap"><div class="heading"><small>APP FEATURES</small><h2>図鑑を楽しむ主な機能</h2><p>知る・探す・集めるを楽しむ6つのコンテンツ。</p></div><div class="cards">
+<article class="card"><div class="ico">⚾</div><h3>選手名鑑</h3><p>選手のプロフィールやポジション、背番号などを一覧でチェックできます。</p></article>
+<article class="card"><div class="ico">🔎</div><h3>かんたん検索</h3><p>名前や背番号、ポジションなどから、見たい選手や情報を探せます。</p></article>
+<article class="card"><div class="ico">📚</div><h3>球団の歴史</h3><p>球団の歩みや印象的な出来事を、年代ごとに振り返ることができます。</p></article>
+<article class="card"><div class="ico">🏆</div><h3>記録・データ</h3><p>歴代の記録やシーズンデータを、図鑑形式で見やすく紹介します。</p></article>
+<article class="card"><div class="ico">🌟</div><h3>名場面コレクション</h3><p>心に残る試合や名場面をテーマ別にまとめて楽しめます。</p></article>
+<article class="card"><div class="ico">❤️</div><h3>お気に入り</h3><p>気になる選手や記事を保存して、自分だけの図鑑を作れます。</p></article>
+</div></div></section>
+<section class="gallery" id="collection"><div class="wrap"><div class="heading"><small>SAMPLE COLLECTION</small><h2>図鑑ページのイメージ</h2><p>アプリ内に収録されるコンテンツをイメージしたサンプルです。</p></div><div class="tiles">
+<div class="tile"><div class="art">01</div><div><small>PLAYER FILE</small><strong>選手プロフィール</strong><span class="muted">基本情報・ポジション</span></div></div>
+<div class="tile"><div class="art">02</div><div><small>HISTORY FILE</small><strong>球団ヒストリー</strong><span class="muted">年代別の出来事</span></div></div>
+<div class="tile"><div class="art">03</div><div><small>RECORD FILE</small><strong>記録アーカイブ</strong><span class="muted">歴代記録・データ</span></div></div>
+<div class="tile"><div class="art">04</div><div><small>MEMORY FILE</small><strong>名場面コレクション</strong><span class="muted">心に残る試合・プレー</span></div></div>
+</div><p class="note">※掲載内容・画面・データは、アプリのコンセプトを説明するための架空のサンプルです。</p></div></section>
+<section class="project" id="about"><div class="wrap"><div class="heading"><small>PROJECT INFO</small><h2>作品概要</h2><p>授業で学んだWeb制作技術を活用した、架空の学生制作アプリです。</p></div><div class="info">
+<div class="item"><small>作品名</small><b>ジャイアンツ大図鑑アプリ</b></div><div class="item"><small>制作ジャンル</small><b>スポーツ・デジタル図鑑</b></div><div class="item"><small>使用技術（想定）</small><b>HTML / CSS / JavaScript</b></div><div class="item"><small>対応デバイス</small><b>PC・タブレット・スマートフォン</b></div><div class="item"><small>制作テーマ</small><b>情報整理と検索しやすさ</b></div><div class="item"><small>作品区分</small><b>架空の学生作品・コンセプトデモ</b></div>
+</div></div></section>
+</main>
+<footer><b>GIANTS ENCYCLOPEDIA APP</b><br>Student Works Showcase / Fictional Project<br>© 2026 Student Project</footer>
+</body></html>
